@@ -29,6 +29,9 @@ jobs:
       - name: download
         run: wget https://dw.oray.com/sunlogin/linux/sunloginclientshell-10.1.1.28779-amd64.deb
 
+      - name: rely on
+        run: sudo apt install libncurses5
+
       # Runs a set of commands using the runners shell
       - name: install
         run: sudo dpkg -i  ./sunloginclientshell-10.1.1.28779-amd64.deb
