@@ -30,11 +30,14 @@ jobs:
         run: wget https://dw.oray.com/sunlogin/linux/sunloginclientshell-10.1.1.28779-amd64.deb
 
       - name: rely on
-        run: sudo apt install libncurses5-dev
+        run: wget https://mirrors.cqupt.edu.cn/deepin/pool/main/n/ncurses/libncurses5_6.1.2-deepin1_amd64.deb
 
       # Runs a set of commands using the runners shell
       - name: install
-        run: sudo apt install ./sunloginclientshell-10.1.1.28779-amd64.deb
+        run: sudo apt install ./libncurses5_6.1.2-deepin1_amd64.deb
+
+      - name: install 
+        run: sudo apt install ./libncurses5_6.1.2-deepin1_amd64.deb
 
       - name: start
         run: /usr/local/sunlogin/bin/sunloginclient
