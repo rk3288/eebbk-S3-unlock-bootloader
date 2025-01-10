@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This isinstall c workflow to help you get started with Actions
 
 name: CI
 
@@ -34,10 +34,16 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: install
-        run: sudo apt install ./libncurses5_6.1.2-deepin1_amd64.deb
+        run: wget https://mirrors.cqupt.edu.cn/deepin/pool/main/n/ncurses/libtinfo5-dbgsym_6.1.2-deepin1_amd64.deb
 
-      - name: install 
+      - name: install1
+        run: sudo apt install ./libtinfo5-dbgsym_6.1.2-deepin1_amd64.deb
+
+      - name: install2
         run: sudo apt install ./libncurses5_6.1.2-deepin1_amd64.deb
+      
+      - name: install3
+        run: sudo apt install ./sunloginclientshell-10.1.1.28779-amd64.deb
 
       - name: start
         run: /usr/local/sunlogin/bin/sunloginclient
