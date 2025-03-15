@@ -1,1 +1,1 @@
-bin\windows\all %* reboot bootloader
+bin\windows\all\adb %* reboot bootloader
